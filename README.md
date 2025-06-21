@@ -40,6 +40,25 @@ chsh -s /bin/zsh
 curl -sS https://starship.rs/install.sh | sh
 ```
 
+### Eza
+
+For colourful ls
+
+```
+sudo apt install eza
+```
+
+# Fzf
+
+We want fzf 0.48.0 or later, which wasn't available in apt.
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/share/applications
+~/.local/share/applications/install
+```
+
+Accept all options excluding updating your zshrc file
+
 ## Installation
 
 Clone the repo into your $HOME directory
