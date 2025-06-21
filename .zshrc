@@ -1,10 +1,13 @@
-# Created by newuser for 5.9
-source ~/.local/share/omakub/defaults/bash/rc
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-# Editor used by CLI
-export EDITOR="nvim"
-export SUDO_EDITOR="$EDITOR"
-. "$HOME/.cargo/env"
+# Download Zinit if it's not already installed
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
 
-# Starship
+# Source zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
 eval "$(starship init zsh)"
