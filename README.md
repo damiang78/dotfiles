@@ -48,7 +48,7 @@ For colourful ls
 sudo apt install eza
 ```
 
-# Fzf
+### Fzf
 
 We want fzf 0.48.0 or later, which wasn't available in apt.
 
@@ -58,6 +58,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/share/applicati
 ```
 
 Accept all options excluding updating your zshrc file
+
+### Zoxide
+
+```
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+```
 
 ## Installation
 
