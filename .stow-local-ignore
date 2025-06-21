@@ -1,1 +1,3 @@
 # use this like a .gitignore file to ignore any files or folders that shouldn't be stowed
+.git
+README.md
