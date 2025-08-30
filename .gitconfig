@@ -1,3 +1,6 @@
+[core]
+  editor = nvim
+
 [alias]
     co = !git checkout $(git branch | fzf)
     cob = checkout -b
@@ -14,6 +17,7 @@
     default = !git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
     bclean = "!f() { DEFAULT=$(git default); git branch --no-merged ${1-$DEFAULT} | xargs git branch -d; }; f"
     bdone = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
+	  br = branch
 [pull]
 	rebase = true
 [user]
@@ -21,3 +25,11 @@
 	email = damian.gonsalves@gmail.com
 [init]
 	defaultBranch = main
+[diff]
+  tool = bc
+[difftool "bc"]
+  path = /home/damian/.local/bin/bcompare
+[merge]
+  tool = bc
+[mergetool "bc"]
+  path = /home/damian/.local/bin/bcompare
