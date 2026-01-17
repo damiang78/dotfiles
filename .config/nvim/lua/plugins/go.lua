@@ -1,24 +1,6 @@
 return {
 
   ---------------------------------------------------------------------------
-  -- Main Go plugin (formatting, imports, code actions, test helpers)
-  ---------------------------------------------------------------------------
-  {
-    "ray-x/go.nvim",
-    dependencies = { "ray-x/guihua.lua" },
-    ft = { "go", "gomod" },
-    config = function()
-      require("go").setup({
-        goimport = "gofumpt",
-        fillstruct = "gopls",
-        gofmt = "gofumpt",
-        lsp_cfg = true,
-        lsp_gofumpt = true,
-      })
-    end,
-  },
-
-  ---------------------------------------------------------------------------
   -- Treesitter Go parsers
   ---------------------------------------------------------------------------
   {
@@ -166,11 +148,13 @@ return {
             gopls = {
               analyses = { unusedparams = true, shadow = true },
               staticcheck = true,
+              gofumpt = true
             },
           },
         },
       },
     },
   },
+
 
 }

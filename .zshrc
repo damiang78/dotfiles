@@ -50,7 +50,7 @@ zstyle ':fzf-tab:complete:__zoxide:*' fzf-preview 'eza $realpath'
 # Aliases - Filesystem
 alias ls="eza -l -g -a --icons"
 alias llt="eza -1 --icons --tree"
-alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias md=mkdir
 alias cls=clear
 
@@ -58,15 +58,6 @@ alias cls=clear
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
-# Tools
-alias n='nvim'
-alias g='git'
-alias d='docker'
-alias r='rails'
-alias bat='batcat'
-alias lzg='lazygit'
-alias lzd='lazydocker'
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
