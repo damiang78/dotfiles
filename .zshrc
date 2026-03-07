@@ -1,6 +1,7 @@
 #PATH
 export PATH="$HOME/.local/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/home/damian/.dotnet/tools"
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -53,6 +54,8 @@ alias llt="eza -1 --icons --tree"
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias md=mkdir
 alias cls=clear
+alias zed=zeditor
+alias m=mise
 
 # Directories
 alias ..='cd ..'
@@ -71,3 +74,5 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(/usr/bin/mise activate zsh)"
